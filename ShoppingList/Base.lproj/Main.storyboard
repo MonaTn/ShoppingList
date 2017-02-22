@@ -37,6 +37,9 @@
                                     <navigationItem title="Create New List" id="801-do-ZMc">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1dq-NH-YGs">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="cancleButton:" destination="BYZ-38-t0r" id="XT7-ej-lUV"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="heb-2I-RhS">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -91,7 +94,7 @@
                                                     <rect key="frame" x="257" y="22.5" width="94" height="29"/>
                                                     <color key="tintColor" red="0.0" green="0.2583413014" blue="0.28787309020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
-                                                        <action selector="stepperTouched:" destination="nUJ-J4-51k" eventType="valueChanged" id="cHp-Kg-o4i"/>
+                                                        <action selector="stepperCounter:" destination="nUJ-J4-51k" eventType="valueChanged" id="sdA-j8-q1Z"/>
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZq-Ed-aaK">
@@ -116,7 +119,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="quantityLable" destination="XZq-Ed-aaK" id="1gT-E5-cWf"/>
-                                            <outlet property="stepperCounter" destination="gAS-2r-NCn" id="xQb-PD-77E"/>
+                                            <outlet property="textItem" destination="PId-lR-zuu" id="vZV-oQ-yj5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
