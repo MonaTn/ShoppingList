@@ -8,29 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDataSource {
+    let shoppingList = [String : Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBOutlet weak var quantityLable: UILabel!
-
-    @IBAction func stepperTouched(_ sender: UIStepper) {
-        sender.minimumValue = 0
-        sender.maximumValue = 20
-        sender.stepValue = 1
-        quantityLable.text = String(Int(sender.value))
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "rows", for: indexPath) as! CustomTableViewCell
+        return cell
     }
     
-    func changeLableValue (_ sender: UIStepper) {
-        
-    }
+    
+    
+
 }
 
