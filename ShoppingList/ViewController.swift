@@ -20,6 +20,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var quantityLable: UILabel!
 
+    @IBAction func stepperTouched(_ sender: UIStepper) {
+        sender.minimumValue = 0
+        sender.maximumValue = 20
+        sender.stepValue = 1
+        quantityLable.text = String(Int(sender.value))
+    }
+    
+    func changeLableValue (_ sender: UIStepper) {
+        
+    }
 }
 
